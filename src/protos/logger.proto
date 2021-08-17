@@ -1,0 +1,19 @@
+syntax = "proto3";
+package logPackage;
+
+message LogRequest {
+    string name = 1;
+    int32 age = 2;
+}
+
+message LogNameRequest {
+    string name = 3;
+}
+
+message Empty {
+}
+
+service LogService {
+  rpc logName (LogNameRequest) returns (Empty);
+  rpc log (LogRequest) returns (Empty);
+}

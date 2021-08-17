@@ -1,0 +1,14 @@
+syntax = "proto3";
+package dataPackage;
+
+message DataRequest {
+    int32 id = 11;
+}
+
+message Empty {
+
+}
+
+service DataService {
+    rpc getFile(DataRequest) returns (Empty);
+}
