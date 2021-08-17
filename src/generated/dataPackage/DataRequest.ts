@@ -2,9 +2,7 @@
 
 
 export interface DataRequest {
-  'id'?: (number);
 }
 
 export interface DataRequest__Output {
-  'id': (number);
 }

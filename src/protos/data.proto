@@ -1,14 +1,12 @@
 syntax = "proto3";
 package dataPackage;
 
-message DataRequest {
-    int32 id = 11;
-}
+message DataRequest {}
 
-message Empty {
-
+message Response {
+    string line = 3;
 }
 
 service DataService {
-    rpc getFile(DataRequest) returns (Empty);
+    rpc getByLine(DataRequest) returns (stream Response);
 }

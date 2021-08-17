@@ -11,7 +11,7 @@ export interface ProtoGrpcType {
   dataPackage: {
     DataRequest: MessageTypeDefinition
     DataService: SubtypeConstructor<typeof grpc.Client, _dataPackage_DataServiceClient> & { service: _dataPackage_DataServiceDefinition }
-    Empty: MessageTypeDefinition
+    Response: MessageTypeDefinition
   }
 }
 
